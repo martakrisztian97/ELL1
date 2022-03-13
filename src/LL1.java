@@ -117,7 +117,7 @@ public class LL1 {
                 if (parseTable[i][0] == "#" && parseTable[0][j] == "#") {
                     parseTable[i][j] = "accept";
                 } else if (parseTable[i][0].equals(parseTable[0][j])) {
-                    parseTable[i][j] = "pop";
+                    parseTable[i][j] = "pop ";
                 } else {
                     parseTable[i][j] = "error";
                 }
@@ -130,6 +130,7 @@ public class LL1 {
             int indexJ = terminals.indexOf(r.getRight().charAt(0));
             parseTable[indexI+1][indexJ+1] = "("+r.getRight()+","+r.getSerial()+")";
         }
+        parseTable[0][0] = "";
     }
 
     /**
@@ -138,7 +139,11 @@ public class LL1 {
     public static void printParseTable() {
         for (int i = 0; i < parseTable.length; i++) {
             for (int j = 0; j < parseTable[i].length; j++) {
-                System.out.print(parseTable[i][j]+"\t\t");
+                if (i == 0) {
+                    System.out.print(parseTable[i][j]+"\t\t\t");
+                } else {
+                    System.out.print(parseTable[i][j]+"\t\t");
+                }
             }
             System.out.println();
         }
