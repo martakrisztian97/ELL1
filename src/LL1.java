@@ -43,6 +43,7 @@ public class LL1 {
      * - Szabalyokat tartalmazo lista
      * - Terminalisok gyujtemenye
      * - Nem terminalisok gyujtemenye
+     * - Elemzo tablazat.
      */
     public static final List<Rule> rules = new ArrayList<>(Arrays.asList(
             new Rule('S', "aS", 1), new Rule('S', "bAc", 2),
@@ -131,6 +132,9 @@ public class LL1 {
         }
     }
 
+    /**
+     * Az elemzo tabla kiiratasa.
+     */
     public static void printParseTable() {
         for (int i = 0; i < parseTable.length; i++) {
             for (int j = 0; j < parseTable[i].length; j++) {
