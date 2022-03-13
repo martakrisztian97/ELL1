@@ -66,7 +66,7 @@ public class LL1 {
     /**
      * Nem terminalisok gyujtemenyenek feltoltese.
      */
-    public static void getNonTerminals() {
+    public static void setNonTerminals() {
         for (Rule r : rules) {
             nonTerminals.add(r.left);
         }
@@ -75,7 +75,7 @@ public class LL1 {
     /**
      * Terminalisok gyujtemenyenek feltoltese.
      */
-    public static void getTerminals() {
+    public static void setTerminals() {
         for (Rule r : rules) {
             for (int i = 0; i < r.right.length(); i++) {
                 if (isTerminal(r.right.charAt(i))) {
