@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LL1 {
+public class ELL1 {
 
     /**
      * Szabalyok tarolasa szolgalo osztaly.
