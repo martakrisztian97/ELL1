@@ -1,0 +1,22 @@
+Szabalyok: 
+(1) S->aS 
+(2) S->bAc 
+(3) A->bAc 
+(4) A->d 
+
+			a			b			c			d			#			
+
+S		(aS,1)		(bAc,2)		error		error		error		
+
+A		error		(bAc,3)		error		(d,4)		error		
+
+a		pop 		error		error		error		error		
+
+b		error		pop 		error		error		error		
+
+c		error		error		pop 		error		error		
+
+d		error		error		error		pop 		error		
+
+#		error		error		error		error		accept		
+
