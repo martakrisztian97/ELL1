@@ -149,10 +149,19 @@ public class ELL1 {
         }
     }
 
+    public static void printRules() {
+        System.out.println("Szabalyok: ");
+        for (Rule r : rules) {
+            System.out.println("("+r.serial+") "+r.getLeft()+"->"+r.getRight()+" ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         setTerminals();
         setNonTerminals();
         setParseTable();
+        printRules();
         printParseTable();
     }
 }
