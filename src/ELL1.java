@@ -145,7 +145,7 @@ public class ELL1 {
                     System.out.print(parseTable[i][j]+"\t\t");
                 }
             }
-            System.out.println();
+            System.out.println("\n");
         }
     }
 
