@@ -149,6 +149,9 @@ public class ELL1 {
         }
     }
 
+    /**
+     * A szabalyok kiiratasa.
+     */
     public static void printRules() {
         System.out.println("Szabalyok: ");
         for (Rule r : rules) {
